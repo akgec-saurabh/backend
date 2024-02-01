@@ -1,0 +1,6 @@
+ADMIN ROUTES
+-------------------------------------------
+Create Product ---> /admin/addProduct
+
+GFQ0LI0M9BDuWvzr
+akgecsaurabh
