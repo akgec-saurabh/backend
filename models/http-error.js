@@ -1,7 +1,8 @@
-const HttpError = (message, errorCode) => {
-  const error = new Error(message);
-  error.code = errorCode;
-  return error;
-};
+class HttpError extends Error {
+  constructor(message, errorCode) {
+    super(message);
+    this.code = errorCode;
+  }
+}
 
 module.exports = HttpError;

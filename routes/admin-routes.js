@@ -3,15 +3,18 @@ const express = require("express");
 const {
   createProduct,
   getAllProducts,
-  addProductDetails,
+  getProductById,
+  updateProductDetails,
 } = require("../controllers/admin-controller");
 
 const router = express.Router();
 
-router.get("/product", getAllProducts);
+router.get("/products", getAllProducts);
+
+router.get("/product/:pid", getProductById);
 
 router.post("/product", createProduct);
 
-router.post("/product/:pid", addProductDetails);
+router.patch("/product/:pid", updateProductDetails);
 
 module.exports = router;
