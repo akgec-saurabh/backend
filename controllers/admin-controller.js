@@ -7,7 +7,6 @@ const getAllProducts = async (req, res, next) => {
     products = await Product.find();
   } catch (error) {
     console.log(error);
-    s;
     return next(
       new HttpError("Some Error Occured while fetching products", 500)
     );

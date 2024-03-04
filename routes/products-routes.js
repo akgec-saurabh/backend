@@ -1,12 +1,19 @@
 const express = require("express");
+// const {
+//   getAllProducts,
+//   getProductById,
+// } = require("../controllers/admin-controller");
 const {
+  getAllFilter,
   getAllProducts,
   getProductById,
-} = require("../controllers/admin-controller");
+} = require("../controllers/products-controller");
 
 const router = express.Router();
 
 router.get("/", getAllProducts);
+
+router.get("/allfilter", getAllFilter);
 
 router.get("/:pid", getProductById);
 

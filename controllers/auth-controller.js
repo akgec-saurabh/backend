@@ -101,6 +101,11 @@ const login = async (req, res, next) => {
     return next(new HttpError("Could not Register, please try again"));
   }
 
+  res.setHeader(
+    "Set-Cookie",
+    "myCookie=cookieValue;    domain=app.localhost; Path=/; HttpOnly=false; SameSite=None"
+  );
+
   res.status(200).json({
     message: "Logged in Succesfully!",
     user: {
